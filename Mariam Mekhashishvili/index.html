@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>Kattamiso.HD</title>
+
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+
+      <!-- fav icon -->
+     <link rel="shortcut icon" type="image/png" href="img\fav-icon.png" />
+   
+     <!--swiper css-->
+     <link
+     rel="stylesheet"
+     href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+   />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+     <!--slider link-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  </head>
+<body>
+ 
+    <!-- menu starts -->
+    
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+       <div class="menu">
+           <div>
+             <div>
+             <ul id="row">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Genre</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav></div>
+       </div>
+       </div></div>
+    </div>
+    </div>   
+
+      <header>
+    <section class="top-section">
+        <div class="top">
+<h1 class="main-name">KATTAMISO.HD</h1>
+        </div>
+  </section>
+  </header>
+
+    <!--SEARCH BAR -->
+    <section>
+        <div class="search-box">
+           <form action="" class="search-bar">
+            <input class="search-txt" type="test" placeholder="Search Movie" require>
+        <a class="search-btn" href="#"><i class="fa fa-search" style="font-size:24px"></i>
+        </a>
+        <button type="submit" class="button" ></button>
+        
+     </form>
+      </div>
+   </section>
+
+
+     <!-- Slider main container -->
+
+     <div class="thumbTiles swiper-container">
+      <div class="swiper">
+  <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slide imgs -->
+          <div class="swiper-slide">
+            <a href = "#" class="thumbTile" ><img src="img\p-1.jpg" 
+              alt="Paranormal Activity1" class="img1"></a>
+          </div>
+          <div class="swiper-slide" >
+            <a href="#" class="thumbTile">
+              <img src="img\post-10.jpg" 
+              alt="Paranormal Activity2" class="img2">
+            </a>
+          </div>
+          <div class="swiper-slide"> <a href ="#" class="thumbTile">
+            <img src="img\p-4.jpg" 
+            alt="Paranormal Activity3" class="img3">
+          </a> </div>
+          <div class="swiper-slide">
+            <a href="#" class="thumbTile">
+              <img src="img\p-5.jpg" 
+              alt="Paranormal Activity4" class="img4">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="thumbTile">
+              <img src="img\p-6.jpg" 
+              alt="Paranormal Activity5" class="img5">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="thumbTile">
+              <img src="img\post-1.jpg" 
+              alt="Paranormal Activity6" class="img6">
+          </a>
+          </div>
+   </div>
+  </div>
+ </div>
+
+
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div>
+</div> -->
+
+    <!-- </section>
+  </section> -->
+
+<!-- <script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  // spaceBetween: -203,
+  slidesPerView: 3,
+  // loop: true,
+  freeMode: true,
+  loopAdditionalSlides: 100,
+  speed:500,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+
+
+</script> -->
+
+
+ <!-- swipper js -->
+ <script src="js/swiper-bundle.min.js"></script>
+ <script src="js/swiper-bundle.min.js"></script>
+ <!-- initialize swiper -->
+ <script>
+   var swiper = new Swiper(".swiper", {
+     slidesPerView: 1,
+     spaceBetween: 10,
+     pagination: {
+       el: ".swiper-pagination",
+       clickable: true,
+     },
+     autoplay: {
+       delay: 5000,
+       disableOninteraction: false,
+     },
+
+     navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     },
+
+     breakpoints: {
+       640: {
+         slidesPerView: 2,
+         spaceBetween: 20,
+       },
+       768: {
+         slidesPerView: 2,
+         spaceBetween: 40,
+       },
+       1024: {
+         slidesPerView: 3,
+         spaceBetween: 50,
+       },
+     },
+   });
+ </script>
+</body>
+</html>
