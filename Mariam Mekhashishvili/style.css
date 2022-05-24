@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: black; */
 }
 body {
   overflow-x: hidden;
@@ -15,24 +14,26 @@ ul {
 
 .main-name {
   color: red;
+  display: flex;
   justify-content: left;
   text-align: left;
   padding: 20px 220px;
   font-family: fantasy;
   font-size: 400%;
+  max-width: 50px;
 }
 
 .search-box {
   display: flex;
+  justify-content: center;
   padding: 0px 0px 30px 500px;
   border-radius: 30px;
   height: 90px;
-  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 90px;
   border-width: 180px;
   text-emphasis-color: rgb(125, 125, 165);
   border-radius: 20px;
-  justify-content: center;
-  align-items: left;
   margin-left: 80px;
 }
 
@@ -154,13 +155,13 @@ ul {
 }
 
 .menu-wrap .toggler:checked ~ .menu > div {
-  transform: scale(1);
+  transform: scale(3);
   transition-duration: var(--menu-speed);
 }
 
 .menu-wrap .toggler:checked ~ .menu > div > div {
-  opacity: 1;
-  transition: opacity 0, 2s ease-out;
+  opacity: 3;
+  transition: opacity 0,4s ease;
 }
 
 /*overlay menu*/
@@ -169,54 +170,69 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
-  visibility: hidden;
+  /*visibility: hidden;*/
   overflow: hidden;
   align-items: right;
   justify-content: center;
 }
 
 .menu-wrap .menu > div {
-  background: var(--overlay-color);
-  border-radius: 100%;
-  width: 0;
+  border-radius: 50%;
+  width: 200vw;
   height: 0;
   display: flex;
   flex: none;
   align-items: right;
   justify-content: center;
-  transform: scale(0);
-  transition: all 0, 2s ease-out;
-}
+  transition: opacity 0.4s ease;
+  background-size: 100% 100%;
+  background-color: var(--overlay-color);
+} 
 
 .menu-wrap .menu > div > div {
+  background-size: 100% 100%;
+  background-color: var(--overlay-color);
   text-align: right;
   max-width: 90vw;
   max-height: 100vh;
   opacity: 0;
   transition: opacity 0, 2s ease-out;
-}
+  /* transform: scale(0); */
+  transition: all 0, 2s ease;
+ 
+} 
 
-.menu-wrap .menu > div > div > ul > li {
+/*.menu-wrap .menu > div > div > ul > li {
   list-style: none;
+  z-index: 99;
   color: white;
-  font-size: 30px;
-  padding: 20 px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
-}
+ 
+}*/
 
 .menu-wrap .menu > div > div > ul > li > a {
   color: inherit;
   text-decoration: none;
+  font-size: 30px;
   transition: color 0, 2s ease-out;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: white;
+  z-index: 99;
 }
+
+
+#row {
+  display: flex;
+  flex-direction: row;
+  
+}
+
 
 /*slide styles*/
 .img1 {
@@ -326,10 +342,6 @@ ul {
 .swiper {
   max-width: 1200px;
   /* background-color: white; */
-}
-
-.swiper-wrapper {
-  /* background-color: GREEN; */
 }
 
 .swiper-slide {
