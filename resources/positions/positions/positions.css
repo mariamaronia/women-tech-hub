@@ -1,0 +1,146 @@
+/* static | relative | absolute | sticky | fixed */
+@font-face {
+  src: url(./Aaux-ProBlack.ttf);
+  font-family: aux;
+}
+
+@font-face {
+  src: url(./BrownBold.ttf);
+  font-family: brownb;
+}
+
+body {
+  background-image: url(https://images7.alphacoders.com/542/thumb-1920-542494.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow-y: hidden; */
+  /* new property */
+  /* background-position-y: -130px; */
+}
+
+.container {
+  /* item will be overriden by "margin: 0 auto", put it under margin auto property*/
+  /* margin-top: 10%;  */
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10%;
+  /* background-color: red; */
+
+  /* center child items inside the parent box */
+  display: flex;
+  justify-content: center;
+
+  /* height: 200vh; */
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  /* display: block; */
+  border: 2px solid;
+  box-shadow: 14px 14px 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  font-family: brownb !important;
+  text-align: center;
+  font-size: 38px;
+  margin-top: 250px;
+  color: white;
+  /*////////////// new properties/////////////////// */
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  /* text-shadow: 7px 6px 5px rgb(0, 0, 0); */
+  font-weight: bold;
+
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 15px 10px 10px rgb(0, 0, 0), -15px 10px 12px rgb(0, 0, 0);
+  /*////////////// end new /////////////////*/
+}
+
+/*//////////////// new pseudo selector //////////////*/
+div.box:nth-child(1) {
+  background-color: rgba(255, 0, 0, 0.39);
+  background-image: url(https://i.ya-webdesign.com/images/gta-5-png-transparent-4.png);
+  background-position-x: -250px;
+}
+
+div.box:nth-child(2) {
+  background-color: rgba(0, 128, 0, 0.507);
+  background-image: url(https://pngimage.net/wp-content/uploads/2018/06/gta-v-trevor-png.png);
+  /* background-position-x: -250px; */
+  /* text-shadow: 15px 10px 10px rgb(59, 172, 17), -15px 10px 12px rgb(208, 12, 12); */
+}
+
+div.box:nth-child(3) {
+  background-color: rgba(0, 0, 255, 0.404);
+  background-image: url(https://i.ya-webdesign.com/images/gta-5-art-png-7.png);
+}
+
+/* ...............end selectors section.............. */
+
+/* ..................................... CSS POSITIONS ...................... */
+
+/* ///////////////     position relative   ////////////// */
+
+/* / პირველი  მაგალითი/  */
+
+/*  */
+.relative {
+  /* position: relative; */
+  /* სანამ ობიექტს ნორმალური დინებიდან არ ამოვაგდებთ მანამდე მშობლის ჩარჩოებს არ გაცდება */
+  /* top: 100px; */
+  /* left: 50px; */
+  /* bottom: 100px; */
+  /* right: 200px; */
+  /* z-index: 2; */
+}
+
+/* //////////      position absolute      /////////////////*/
+
+/* / მეორე მაგალითი */
+
+.michael-absolute {
+  /* position: relative; */
+  /* top: 100px; */
+  /* left: 100px; */
+  /* position: absolute; */
+  /* top: 0px;
+  left: 0px; */
+  /* bottom: 100px; */
+  /* right: 200px; */
+  /* z-index: 1; */
+  /* დეფოლტად ელემენტის ზ ინდექსი არის 0*/
+}
+
+/* განსხვავება ზ ინდექსებს შორის html პოზიციის მიხედვით */
+.trevor-absolute {
+  /* position: absolute; */
+  /* z-index: 0; */
+  /* z-index: 0; */
+  /* რომც არ ეწეროს დეფოლტად იგულისხმება მაინც */
+}
+
+/* /////////////////// position sticky  /////////////////*/
+
+.container {
+  height: 1300px;
+}
+
+.franklin-sticky {
+  /* position: sticky;
+  top: 100px; */
+}
+
+/* ////////////////   position fixed ///////////////////*/
+/* fixed იგივე აბსოლუტია იმ განსხვავებით რომ ვიუპორტს(ხილულ ეკრანს) არ ცდება სანამ არ ვერტყვით*/
+.trevor-fixed {
+  /* position: fixed;
+  top: 400px;
+  right: 200px;
+  bottom: 100px;
+  left: 300px; */
+}

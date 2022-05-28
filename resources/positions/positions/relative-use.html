@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        color: rgb(0, 0, 0);
+      }
+
+      div.parent {
+        /* font-size: 100px; */
+        margin: 40px;
+        overflow: hidden;
+        position: relative;
+        /* იმისთვის რომ აბსოლუტ პოზიციის შვილები მშობლებს არ გაცდეს და მხოლოდ მშობლის 
+            შიგნით იმოძრაოს, მშობელ ელემენტს აუცილებლად უნდა გავუწეროთ რელატივი. */
+      }
+
+      div div {
+        font-size: 130px;
+      }
+
+      .parent {
+        padding: 30px;
+        background-color: rgba(2, 144, 144, 0.774);
+      }
+
+      .child1 {
+        background-color: rgb(255, 0, 0);
+        position: relative;
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0px; */
+        /* ტოპ 0  გაწერისას ობიექტი პოზიციონირდება მთლიანი hmtl დოკუმენტის მიმართ. 
+            ანუ ამ შემთხვევაში უბრალოდ გაცდა თავის მშობელს, რადგან ნორმალური
+             დინებიდან ამოვაგდეთ სრულად.*/
+
+        /* position: fixed; fixed მშობელთან ნათესაობას არ აღიარებს და არ გაითვალისწინებს რა უწერია მშობელს,
+             რელაციას ხედავს რუთ html ელემენტთან ამიტომ მშობლის საზღვრებში არ მოექცევა.*/
+      }
+
+      .child2 {
+        background-color: rgba(72, 255, 0, 0.815);
+      }
+
+      .child3 {
+        background-color: rgba(0, 68, 255, 0.794);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <!-- parent -->
+      <div class="child1">child1</div>
+
+      <div class="child2">child2</div>
+      <div class="child3">child 3</div>
+    </div>
+  </body>
+</html>
